@@ -1,0 +1,1247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevXVisions | Modern Photo Gallery - Capturing Moments, Creating Art</title>
+    <meta name="description" content="Explore our curated collection of stunning photographs. Modern gallery with dark/light themes, advanced filtering, and interactive features.">
+    <meta name="keywords" content="photo gallery, photography, art, portfolio, modern design, responsive">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+</head>
+<body class="text-gray-200">
+
+    <!-- Parallax Background -->
+    <div class="parallax-bg">
+        <div class="absolute inset-0 bg-gradient-to-br from-orange-500/10 via-transparent to-blue-500/10"></div>
+    </div>
+
+    <!-- Header / Navigation -->
+    <header class="bg-black bg-opacity-30 backdrop-blur-lg fixed top-0 left-0 right-0 z-50 border-b border-gray-800">
+        <div class="container mx-auto px-6 py-4 flex items-center justify-between">
+            <div class="flex items-center space-x-2">
+                <svg class="w-8 h-8 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
+                <h1 class="text-2xl font-bold text-white">DevXVisions</h1>
+            </div>
+            
+            <!-- Search Bar -->
+            <div class="search-bar hidden lg:block flex-grow mx-8">
+                <i class="fas fa-search absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
+                <input type="text" id="searchInput" placeholder="Search photos..." class="w-full">
+            </div>
+
+            <nav class="hidden md:flex items-center space-x-8">
+                <a href="#home" class="nav-link text-gray-300 hover:text-orange-500">Home</a>
+                <a href="#gallery" class="nav-link text-gray-300 hover:text-orange-500">Gallery</a>
+                <a href="#categories" class="nav-link text-gray-300 hover:text-orange-500">Categories</a>
+                <a href="#about" class="nav-link text-gray-300 hover:text-orange-500">About</a>
+                <a href="#contact" class="nav-link text-gray-300 hover:text-orange-500">Contact</a>
+            </nav>
+
+            <div class="flex items-center space-x-4 md:hidden">
+                <!-- Mobile Menu Button -->
+                <button class="text-white" id="mobileMenuBtn">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobileMenu">
+            <div class="px-6 py-4 space-y-4">
+                <div class="search-bar">
+                    <i class="fas fa-search absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
+                    <input type="text" id="mobileSearchInput" placeholder="Search photos..." class="w-full">
+                </div>
+                <nav class="space-y-3">
+                    <a href="#home" class="block text-gray-300 hover:text-orange-500 py-2">Home</a>
+                    <a href="#gallery" class="block text-gray-300 hover:text-orange-500 py-2">Gallery</a>
+                    <a href="#categories" class="block text-gray-300 hover:text-orange-500 py-2">Categories</a>
+                    <a href="#about" class="block text-gray-300 hover:text-orange-500 py-2">About</a>
+                    <a href="#contact" class="block text-gray-300 hover:text-orange-500 py-2">Contact</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-24">
+        <!-- Hero Section -->
+        <section id="home" class="hero-glow text-center py-20 lg:py-32 px-6 relative overflow-hidden">
+            <!-- Animated Background Elements -->
+            <div class="absolute inset-0 overflow-hidden">
+                <div class="absolute top-20 left-10 w-20 h-20 bg-orange-500 rounded-full opacity-20 animate-pulse"></div>
+                <div class="absolute top-40 right-20 w-16 h-16 bg-blue-500 rounded-full opacity-20 animate-bounce"></div>
+                <div class="absolute bottom-20 left-1/4 w-12 h-12 bg-purple-500 rounded-full opacity-20 animate-ping"></div>
+                <div class="absolute bottom-40 right-1/3 w-8 h-8 bg-green-500 rounded-full opacity-20 animate-pulse"></div>
+            </div>
+            
+            <div class="container mx-auto relative z-10">
+                <div class="max-w-4xl mx-auto">
+                    <h1 class="text-5xl md:text-7xl font-extrabold text-white mb-6 leading-tight">
+                        Capturing Moments, 
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-pink-400">Creating Art</span>
+                    </h1>
+                    <p class="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto mb-8 leading-relaxed">
+                        Discover stunning photography from around the world. Our curated gallery features breathtaking landscapes, 
+                        wildlife, and moments that inspire.
+                    </p>
+                    
+                    <!-- Feature Highlights -->
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+                        <div class="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6 border border-white border-opacity-20">
+                            <div class="w-12 h-12 bg-orange-600 rounded-lg flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-search text-white text-xl"></i>
+                            </div>
+                            <h3 class="text-white font-semibold mb-2">Smart Search</h3>
+                            <p class="text-gray-300 text-sm">Find any photo instantly with our intelligent search</p>
+                        </div>
+                        <div class="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6 border border-white border-opacity-20">
+                            <div class="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-filter text-white text-xl"></i>
+                            </div>
+                            <h3 class="text-white font-semibold mb-2">Category Filters</h3>
+                            <p class="text-gray-300 text-sm">Browse by nature, landscape, wildlife & more</p>
+                        </div>
+                        <div class="bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6 border border-white border-opacity-20">
+                            <div class="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-download text-white text-xl"></i>
+                            </div>
+                            <h3 class="text-white font-semibold mb-2">Free Downloads</h3>
+                            <p class="text-gray-300 text-sm">Download high-quality images for personal use</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Call to Actions -->
+                    <div class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-6">
+                        <button id="exploreGalleryBtn" class="bg-gradient-to-r from-orange-600 to-orange-700 hover:from-orange-700 hover:to-orange-800 text-white font-semibold py-4 px-8 rounded-xl transition duration-300 transform hover:scale-105 shadow-lg">
+                            <i class="fas fa-images mr-2"></i>Explore Gallery
+                        </button>
+                        <button id="browseCategoriesBtn" class="border-2 border-white border-opacity-30 text-white hover:bg-white hover:text-gray-900 font-semibold py-4 px-8 rounded-xl transition duration-300 backdrop-blur-sm">
+                            <i class="fas fa-th-large mr-2"></i>Browse Categories
+                        </button>
+                        <button id="startSlideshowBtn" class="bg-white bg-opacity-20 hover:bg-opacity-30 text-white font-semibold py-4 px-8 rounded-xl transition duration-300 backdrop-blur-sm">
+                            <i class="fas fa-play mr-2"></i>Start Slideshow
+                        </button>
+                    </div>
+                    
+                    <!-- Stats -->
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16">
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-white mb-2">500+</div>
+                            <div class="text-gray-400">Photos</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-white mb-2">50+</div>
+                            <div class="text-gray-400">Categories</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-white mb-2">10K+</div>
+                            <div class="text-gray-400">Downloads</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-white mb-2">24/7</div>
+                            <div class="text-gray-400">Available</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Categories Section -->
+        <section id="categories" class="py-16 px-6 bg-gradient-to-br from-gray-900 to-gray-800">
+            <div class="container mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl md:text-5xl font-bold text-white mb-4">Explore Categories</h2>
+                    <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                        Discover stunning photography organized by themes. Each category showcases unique perspectives and artistic styles.
+                    </p>
+                </div>
+
+                <!-- Category Cards -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 mb-12">
+                    <!-- All Category -->
+                    <div class="category-card group cursor-pointer" data-category="all">
+                        <div class="bg-gradient-to-br from-gray-700 to-gray-800 rounded-2xl p-6 text-center hover:from-orange-500 hover:to-orange-600 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl">
+                            <div class="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-white group-hover:bg-opacity-30 transition duration-300">
+                                <i class="fas fa-th-large text-white text-2xl"></i>
+                            </div>
+                            <h3 class="text-white font-bold text-lg mb-2">All Photos</h3>
+                            <p class="text-gray-300 text-sm mb-3">Complete Collection</p>
+                            <div class="text-orange-400 font-semibold">500+ Images</div>
+                        </div>
+                    </div>
+
+                    <!-- Landscape Category -->
+                    <div class="category-card group cursor-pointer" data-category="landscape">
+                        <div class="bg-gradient-to-br from-orange-600 to-orange-700 rounded-2xl p-6 text-center hover:from-orange-500 hover:to-orange-600 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl">
+                            <div class="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-white group-hover:bg-opacity-30 transition duration-300">
+                                <i class="fas fa-mountain text-white text-2xl"></i>
+                            </div>
+                            <h3 class="text-white font-bold text-lg mb-2">Landscape</h3>
+                            <p class="text-gray-200 text-sm mb-3">Mountains & Views</p>
+                            <div class="text-white font-semibold">150+ Images</div>
+                        </div>
+                    </div>
+
+                    <!-- Nature Category -->
+                    <div class="category-card group cursor-pointer" data-category="nature">
+                        <div class="bg-gradient-to-br from-green-600 to-green-700 rounded-2xl p-6 text-center hover:from-green-500 hover:to-green-600 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl">
+                            <div class="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-white group-hover:bg-opacity-30 transition duration-300">
+                                <i class="fas fa-leaf text-white text-2xl"></i>
+                            </div>
+                            <h3 class="text-white font-bold text-lg mb-2">Nature</h3>
+                            <p class="text-gray-200 text-sm mb-3">Forests & Plants</p>
+                            <div class="text-white font-semibold">120+ Images</div>
+                        </div>
+                    </div>
+
+                    <!-- Water Category -->
+                    <div class="category-card group cursor-pointer" data-category="water">
+                        <div class="bg-gradient-to-br from-blue-600 to-blue-700 rounded-2xl p-6 text-center hover:from-blue-500 hover:to-blue-600 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl">
+                            <div class="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-white group-hover:bg-opacity-30 transition duration-300">
+                                <i class="fas fa-water text-white text-2xl"></i>
+                            </div>
+                            <h3 class="text-white font-bold text-lg mb-2">Water</h3>
+                            <p class="text-gray-200 text-sm mb-3">Oceans & Lakes</p>
+                            <div class="text-white font-semibold">100+ Images</div>
+                        </div>
+                    </div>
+
+                    <!-- Wildlife Category -->
+                    <div class="category-card group cursor-pointer" data-category="wildlife">
+                        <div class="bg-gradient-to-br from-purple-600 to-purple-700 rounded-2xl p-6 text-center hover:from-purple-500 hover:to-purple-600 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl">
+                            <div class="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-white group-hover:bg-opacity-30 transition duration-300">
+                                <i class="fas fa-paw text-white text-2xl"></i>
+                            </div>
+                            <h3 class="text-white font-bold text-lg mb-2">Wildlife</h3>
+                            <p class="text-gray-200 text-sm mb-3">Animals & Birds</p>
+                            <div class="text-white font-semibold">80+ Images</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section id="gallery" class="py-20 px-6">
+
+        <!-- Photo Gallery -->
+        <section class="py-20 px-6">
+            <div class="container mx-auto">
+                <div id="galleryGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Gallery Item 1 -->
+                    <div class="gallery-item group relative overflow-hidden rounded-lg cursor-pointer shadow-lg" 
+                         data-category="landscape" 
+                         data-title="Serene Landscapes" 
+                         data-description="Misty mountains at dawn capture the peaceful beauty of untouched wilderness"
+                         data-date="2024-01-15"
+                         data-likes="127"
+                         data-downloads="89">
+                        <img src="images/1.avif"
+                             alt="Misty mountains at dawn - Serene Landscapes photography" 
+                             class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500 ease-in-out"
+                             loading="lazy">
+                        <div class="overlay">
+                            <div class="overlay-content">
+                                <div class="flex items-center space-x-2">
+                                    <span class="bg-orange-600 text-white px-2 py-1 rounded-full text-xs font-medium">Landscape</span>
+                                </div>
+                                <div class="flex items-center space-x-2">
+                                    <button class="like-btn text-white hover:text-red-500" data-likes="127">
+                                        <i class="fas fa-heart"></i> 127
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="overlay-bottom">
+                                <div>
+                                    <h3 class="text-white text-xl font-bold">Serene Landscapes</h3>
+                                    <p class="text-gray-300 text-sm">Misty mountains at dawn</p>
+                                </div>
+                                <div class="flex space-x-2">
+                                    <button class="share-btn text-white hover:text-blue-400">
+                                        <i class="fas fa-share"></i>
+                                    </button>
+                                    <button class="download-btn text-white hover:text-green-400">
+                                        <i class="fas fa-download"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Gallery Item 2 -->
+                    <div class="gallery-item group relative overflow-hidden rounded-lg cursor-pointer shadow-lg" 
+                         data-category="water" 
+                         data-title="Coastal Paradise" 
+                         data-description="Crystal clear lake waters reflecting the perfect sky above"
+                         data-date="2024-01-12"
+                         data-likes="203"
+                         data-downloads="156">
+                        <img src="images/2.avif" 
+                             alt="Crystal clear lake waters - Coastal Paradise photography" 
+                             class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500 ease-in-out"
+                             loading="lazy">
+                        <div class="overlay">
+                            <div class="overlay-content">
+                                <div class="flex items-center space-x-2">
+                                    <span class="bg-blue-600 text-white px-2 py-1 rounded-full text-xs font-medium">Water</span>
+                                </div>
+                                <div class="flex items-center space-x-2">
+                                    <button class="like-btn text-white hover:text-red-500" data-likes="203">
+                                        <i class="fas fa-heart"></i> 203
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="overlay-bottom">
+                                <div>
+                                    <h3 class="text-white text-xl font-bold">Coastal Paradise</h3>
+                                    <p class="text-gray-300 text-sm">Crystal clear lake waters</p>
+                                </div>
+                                <div class="flex space-x-2">
+                                    <button class="share-btn text-white hover:text-blue-400">
+                                        <i class="fas fa-share"></i>
+                                    </button>
+                                    <button class="download-btn text-white hover:text-green-400">
+                                        <i class="fas fa-download"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Gallery Item 3 -->
+                    <div class="gallery-item group relative overflow-hidden rounded-lg cursor-pointer shadow-lg" 
+                         data-category="nature" 
+                         data-title="Mountain Retreat" 
+                         data-description="Cozy cabin nestled in the heart of pristine wilderness"
+                         data-date="2024-01-10"
+                         data-likes="98"
+                         data-downloads="67">
+                        <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                             alt="Cozy cabin in wilderness - Mountain Retreat photography" 
+                             class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500 ease-in-out"
+                             loading="lazy">
+                        <div class="overlay">
+                            <div class="overlay-content">
+                                <div class="flex items-center space-x-2">
+                                    <span class="bg-green-600 text-white px-2 py-1 rounded-full text-xs font-medium">Nature</span>
+                                </div>
+                                <div class="flex items-center space-x-2">
+                                    <button class="like-btn text-white hover:text-red-500" data-likes="98">
+                                        <i class="fas fa-heart"></i> 98
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="overlay-bottom">
+                                <div>
+                                    <h3 class="text-white text-xl font-bold">Mountain Retreat</h3>
+                                    <p class="text-gray-300 text-sm">Cozy cabin in wilderness</p>
+                                </div>
+                                <div class="flex space-x-2">
+                                    <button class="share-btn text-white hover:text-blue-400">
+                                        <i class="fas fa-share"></i>
+                                    </button>
+                                    <button class="download-btn text-white hover:text-green-400">
+                                        <i class="fas fa-download"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Gallery Item 4 -->
+                    <div class="gallery-item group relative overflow-hidden rounded-lg cursor-pointer shadow-lg" 
+                         data-category="water" 
+                         data-title="Calm Waters" 
+                         data-description="Peaceful wooden pier extending into tranquil waters"
+                         data-date="2024-01-08"
+                         data-likes="145"
+                         data-downloads="112">
+                        <img src="https://images.unsplash.com/photo-1532274402911-5a369e4c4bb5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                             alt="Wooden pier on calm waters - Calm Waters photography" 
+                             class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500 ease-in-out"
+                             loading="lazy">
+                        <div class="overlay">
+                            <div class="overlay-content">
+                                <div class="flex items-center space-x-2">
+                                    <span class="bg-blue-600 text-white px-2 py-1 rounded-full text-xs font-medium">Water</span>
+                                </div>
+                                <div class="flex items-center space-x-2">
+                                    <button class="like-btn text-white hover:text-red-500" data-likes="145">
+                                        <i class="fas fa-heart"></i> 145
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="overlay-bottom">
+                                <div>
+                                    <h3 class="text-white text-xl font-bold">Calm Waters</h3>
+                                    <p class="text-gray-300 text-sm">Peaceful wooden pier</p>
+                                </div>
+                                <div class="flex space-x-2">
+                                    <button class="share-btn text-white hover:text-blue-400">
+                                        <i class="fas fa-share"></i>
+                                    </button>
+                                    <button class="download-btn text-white hover:text-green-400">
+                                        <i class="fas fa-download"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Gallery Item 5 -->
+                     <div class="gallery-item group relative overflow-hidden rounded-lg cursor-pointer shadow-lg" 
+                         data-category="wildlife" 
+                         data-title="The Watchful Eye of the Raptor" 
+                         data-description=""
+                         data-date="2023-12-25"
+                         data-likes="198"
+                         data-downloads="134">
+                        <img src="images/13.jpg" 
+                             alt="Raptor perched on a tree branch - The Watchful Eye of the Raptor wildlife photography" 
+                             class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500 ease-in-out"
+                             loading="lazy">
+                        <div class="overlay">
+                            <div class="overlay-content">
+                                <div class="flex items-center space-x-2">
+                                    <span class="bg-purple-600 text-white px-2 py-1 rounded-full text-xs font-medium">Wildlife</span>
+                                </div>
+                                <div class="flex items-center space-x-2">
+                                    <button class="like-btn text-white hover:text-red-500" data-likes="198">
+                                        <i class="fas fa-heart"></i> 198
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="overlay-bottom">
+                                <div>
+                                    <h3 class="text-white text-xl font-bold">The Watchful Eye of the Raptor</h3>
+                                    <p class="text-gray-300 text-sm">A majestic raptor perched on a tree branch, surveying its surroundings</p>
+                                </div>
+                                <div class="flex space-x-2">
+                                    <button class="share-btn text-white hover:text-blue-400">
+                                        <i class="fas fa-share"></i>
+                                    </button>
+                                    <button class="download-btn text-white hover:text-green-400">
+                                        <i class="fas fa-download"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+
+                    <!-- Gallery Item 6 -->
+                    <div class="gallery-item group relative overflow-hidden rounded-lg cursor-pointer shadow-lg" 
+                         data-category="nature" 
+                         data-title="Enchanted Forest" 
+                         data-description="Mystical forest path leading into the unknown"
+                         data-date="2024-01-03"
+                         data-likes="189"
+                         data-downloads="143">
+                        <img src="https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                             alt="Mystical forest path - Enchanted Forest photography" 
+                             class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500 ease-in-out"
+                             loading="lazy">
+                        <div class="overlay">
+                            <div class="overlay-content">
+                                <div class="flex items-center space-x-2">
+                                    <span class="bg-green-600 text-white px-2 py-1 rounded-full text-xs font-medium">Nature</span>
+                                </div>
+                                <div class="flex items-center space-x-2">
+                                    <button class="like-btn text-white hover:text-red-500" data-likes="189">
+                                        <i class="fas fa-heart"></i> 189
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="overlay-bottom">
+                                <div>
+                                    <h3 class="text-white text-xl font-bold">Enchanted Forest</h3>
+                                    <p class="text-gray-300 text-sm">Mystical forest path</p>
+                                </div>
+                                <div class="flex space-x-2">
+                                    <button class="share-btn text-white hover:text-blue-400">
+                                        <i class="fas fa-share"></i>
+                                    </button>
+                                    <button class="download-btn text-white hover:text-green-400">
+                                        <i class="fas fa-download"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Gallery Item 7 -->
+                    <div class="gallery-item group relative overflow-hidden rounded-lg cursor-pointer shadow-lg" 
+                         data-category="landscape" 
+                         data-title="Rolling Hills" 
+                         data-description="Endless green hills stretching to the horizon"
+                         data-date="2024-01-01"
+                         data-likes="156"
+                         data-downloads="98">
+                        <img src="https://images.unsplash.com/photo-1472214103451-9374bd1c798e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                             alt="Endless green hills landscape - Rolling Hills photography" 
+                             class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500 ease-in-out"
+                             loading="lazy">
+                        <div class="overlay">
+                            <div class="overlay-content">
+                                <div class="flex items-center space-x-2">
+                                    <span class="bg-orange-600 text-white px-2 py-1 rounded-full text-xs font-medium">Landscape</span>
+                                </div>
+                                <div class="flex items-center space-x-2">
+                                    <button class="like-btn text-white hover:text-red-500" data-likes="156">
+                                        <i class="fas fa-heart"></i> 156
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="overlay-bottom">
+                                <div>
+                                    <h3 class="text-white text-xl font-bold">Rolling Hills</h3>
+                                    <p class="text-gray-300 text-sm">Endless green hills</p>
+                                </div>
+                                <div class="flex space-x-2">
+                                    <button class="share-btn text-white hover:text-blue-400">
+                                        <i class="fas fa-share"></i>
+                                    </button>
+                                    <button class="download-btn text-white hover:text-green-400">
+                                        <i class="fas fa-download"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Gallery Item 8 -->
+                    <div class="gallery-item group relative overflow-hidden rounded-lg cursor-pointer shadow-lg" 
+                         data-category="water" 
+                         data-title="Majestic Falls" 
+                         data-description="Powerful waterfall cascading through rocky terrain"
+                         data-date="2023-12-28"
+                         data-likes="267"
+                         data-downloads="201">
+                        <img src="https://images.unsplash.com/photo-1433086966358-54859d0ed716?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" 
+                             alt="Powerful waterfall cascading - Majestic Falls photography" 
+                             class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500 ease-in-out"
+                             loading="lazy">
+                        <div class="overlay">
+                            <div class="overlay-content">
+                                <div class="flex items-center space-x-2">
+                                    <span class="bg-blue-600 text-white px-2 py-1 rounded-full text-xs font-medium">Water</span>
+                                </div>
+                                <div class="flex items-center space-x-2">
+                                    <button class="like-btn text-white hover:text-red-500" data-likes="267">
+                                        <i class="fas fa-heart"></i> 267
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="overlay-bottom">
+                                <div>
+                                    <h3 class="text-white text-xl font-bold">Majestic Falls</h3>
+                                    <p class="text-gray-300 text-sm">Powerful waterfall</p>
+                                </div>
+                                <div class="flex space-x-2">
+                                    <button class="share-btn text-white hover:text-blue-400">
+                                        <i class="fas fa-share"></i>
+                                    </button>
+                                    <button class="download-btn text-white hover:text-green-400">
+                                        <i class="fas fa-download"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Gallery Item 9 -->
+                    <div class="gallery-item group relative overflow-hidden rounded-lg cursor-pointer shadow-lg" 
+                         data-category="wildlife" 
+                         data-title="Morning Mist" 
+                         data-description="Gentle deer in morning mist creating a magical atmosphere"
+                         data-date="2023-12-25"
+                         data-likes="198"
+                         data-downloads="134">
+                        <img src="https://images.unsplash.com/photo-1502082553048-f009c37129b9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                             alt="Deer in morning mist - Morning Mist wildlife photography" 
+                             class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500 ease-in-out"
+                             loading="lazy">
+                        <div class="overlay">
+                            <div class="overlay-content">
+                                <div class="flex items-center space-x-2">
+                                    <span class="bg-purple-600 text-white px-2 py-1 rounded-full text-xs font-medium">Wildlife</span>
+                                </div>
+                                <div class="flex items-center space-x-2">
+                                    <button class="like-btn text-white hover:text-red-500" data-likes="198">
+                                        <i class="fas fa-heart"></i> 198
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="overlay-bottom">
+                                <div>
+                                    <h3 class="text-white text-xl font-bold">Morning Mist</h3>
+                                    <p class="text-gray-300 text-sm">Gentle deer in mist</p>
+                                </div>
+                                <div class="flex space-x-2">
+                                    <button class="share-btn text-white hover:text-blue-400">
+                                        <i class="fas fa-share"></i>
+                                    </button>
+                                    <button class="download-btn text-white hover:text-green-400">
+                                        <i class="fas fa-download"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Gallery Item 10 -->
+                    <div class="gallery-item group relative overflow-hidden rounded-lg cursor-pointer shadow-lg" 
+                        data-category="nature" data-title="Hidden Trail" 
+                        data-description="A quiet forest path covered in golden leaves"
+                        data-date="2023-12-18" data-likes="134" data-downloads="109">
+                    <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80"
+                        alt="Forest path in golden autumn - Hidden Trail photography"
+                        class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500 ease-in-out" loading="lazy">
+                    <div class="overlay">
+                        <div class="overlay-content">
+                        <div class="flex items-center space-x-2">
+                            <span class="bg-green-600 text-white px-2 py-1 rounded-full text-xs font-medium">Nature</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <button class="like-btn text-white hover:text-red-500" data-likes="134">
+                            <i class="fas fa-heart"></i> 134
+                            </button>
+                        </div>
+                        </div>
+                        <div class="overlay-bottom">
+                        <div>
+                            <h3 class="text-white text-xl font-bold">Hidden Trail</h3>
+                            <p class="text-gray-300 text-sm">A quiet forest path covered in golden leaves</p>
+                        </div>
+                        <div class="flex space-x-2">
+                            <button class="share-btn text-white hover:text-blue-400">
+                            <i class="fas fa-share"></i>
+                            </button>
+                            <button class="download-btn text-white hover:text-green-400">
+                            <i class="fas fa-download"></i>
+                            </button>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+                   
+                    <!-- Gallery Item 11 -->
+                    <div class="gallery-item group relative overflow-hidden rounded-lg cursor-pointer shadow-lg" 
+                        data-category="landscape" 
+                        data-title="Galactic View Over Snowy Peaks" 
+                        data-description="Endless green hills stretching to the horizon"
+                        data-date="2024-01-01"
+                        data-likes="156"
+                        data-downloads="98">
+                        <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" 
+                            alt="Endless green hills landscape - Galactic View Over Snowy Peaks photography" 
+                            class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500 ease-in-out"
+                            loading="lazy">
+                        <div class="overlay">
+                            <div class="overlay-content">
+                                <div class="flex items-center space-x-2">
+                                    <span class="bg-orange-600 text-white px-2 py-1 rounded-full text-xs font-medium">Landscape</span>
+                                </div>
+                                <div class="flex items-center space-x-2">
+                                    <button class="like-btn text-white hover:text-red-500" data-likes="156">
+                                        <i class="fas fa-heart"></i> 156
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="overlay-bottom">
+                                <div>
+                                    <h3 class="text-white text-xl font-bold">Galactic View Over Snowy Peaks</h3>
+                                    <p class="text-gray-300 text-sm">Endless green hills</p>
+                                </div>
+                                <div class="flex space-x-2">
+                                    <button class="share-btn text-white hover:text-blue-400">
+                                        <i class="fas fa-share"></i>
+                                    </button>
+                                    <button class="download-btn text-white hover:text-green-400">
+                                        <i class="fas fa-download"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Gallery Item 12 -->
+                    <div class="gallery-item group relative overflow-hidden rounded-lg cursor-pointer shadow-lg"
+                        data-category="nature"
+                        data-title="Misty Morning"
+                        data-description="Fog rolling over a serene valley"
+                        data-date="2024-02-11"
+                        data-likes="178"
+                        data-downloads="135">
+                        <img src="https://images.unsplash.com/photo-1500534623283-312aade485b7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80"
+                            alt="Fog rolling over a serene valley - Misty Morning"
+                            class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500 ease-in-out" loading="lazy">
+                        <div class="overlay">
+                            <div class="overlay-content">
+                                <div class="flex items-center space-x-2">
+                                    <span class="bg-green-600 text-white px-2 py-1 rounded-full text-xs font-medium">Nature</span>
+                                </div>
+                                <div class="flex items-center space-x-2">
+                                    <button class="like-btn text-white hover:text-red-500" data-likes="178">
+                                        <i class="fas fa-heart"></i> 178
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="overlay-bottom">
+                                <div>
+                                    <h3 class="text-white text-xl font-bold">Misty Morning</h3>
+                                    <p class="text-gray-300 text-sm">Fog rolling over a serene valley</p>
+                                </div>
+                                <div class="flex space-x-2">
+                                    <button class="share-btn text-white hover:text-blue-400"><i class="fas fa-share"></i></button>
+                                    <button class="download-btn text-white hover:text-green-400"><i class="fas fa-download"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Gallery Item 13 -->
+                   <div class="gallery-item group relative overflow-hidden rounded-lg cursor-pointer shadow-lg" 
+                         data-category="wildlife" 
+                         data-title="The Lion's Mighty Roar" 
+                         data-description="A majestic lion roaring in the African savannah"
+                         data-date="2023-12-25"
+                         data-likes="198"
+                         data-downloads="134">
+                        <img src="images/12.avif" 
+                             alt="Lion roaring in the African savannah - The Lion's Mighty Roar wildlife photography" 
+                             class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500 ease-in-out"
+                             loading="lazy">
+                        <div class="overlay">
+                            <div class="overlay-content">
+                                <div class="flex items-center space-x-2">
+                                    <span class="bg-purple-600 text-white px-2 py-1 rounded-full text-xs font-medium">Wildlife</span>
+                                </div>
+                                <div class="flex items-center space-x-2">
+                                    <button class="like-btn text-white hover:text-red-500" data-likes="198">
+                                        <i class="fas fa-heart"></i> 198
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="overlay-bottom">
+                                <div>
+                                    <h3 class="text-white text-xl font-bold">The Lion's Mighty Roar</h3>
+                                    <p class="text-gray-300 text-sm">A majestic lion roaring in the African savannah</p>
+                                </div>
+                                <div class="flex space-x-2">
+                                    <button class="share-btn text-white hover:text-blue-400">
+                                        <i class="fas fa-share"></i>
+                                    </button>
+                                    <button class="download-btn text-white hover:text-green-400">
+                                        <i class="fas fa-download"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Gallery Item 14 -->
+                    <div class="gallery-item group relative overflow-hidden rounded-lg cursor-pointer shadow-lg" 
+                         data-category="landscape" 
+                         data-title="Golden Hour" 
+                         data-description="Breathtaking beach sunset painting the sky in warm colors"
+                         data-date="2024-01-05"
+                         data-likes="312"
+                         data-downloads="234">
+                        <img src="https://images.unsplash.com/photo-1505144808419-1957a94ca61e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" 
+                             alt="Beach sunset golden hour - Golden Hour photography" 
+                             class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500 ease-in-out"
+                             loading="lazy">
+                        <div class="overlay">
+                            <div class="overlay-content">
+                                <div class="flex items-center space-x-2">
+                                    <span class="bg-orange-600 text-white px-2 py-1 rounded-full text-xs font-medium">Landscape</span>
+                                </div>
+                                <div class="flex items-center space-x-2">
+                                    <button class="like-btn text-white hover:text-red-500" data-likes="312">
+                                        <i class="fas fa-heart"></i> 312
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="overlay-bottom">
+                                <div>
+                                    <h3 class="text-white text-xl font-bold">Golden Hour</h3>
+                                    <p class="text-gray-300 text-sm">Breathtaking beach sunset</p>
+                                </div>
+                                <div class="flex space-x-2">
+                                    <button class="share-btn text-white hover:text-blue-400">
+                                        <i class="fas fa-share"></i>
+                                    </button>
+                                    <button class="download-btn text-white hover:text-green-400">
+                                        <i class="fas fa-download"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Gallery Item 15 -->
+                    <div class="gallery-item group relative overflow-hidden rounded-lg cursor-pointer shadow-lg" 
+                         data-category="water" 
+                         data-title="Mystical Mountain Waterfalls" 
+                         data-description="Powerful waterfall cascading through rocky terrain"
+                         data-date="2023-12-28"
+                         data-likes="267"
+                         data-downloads="201">
+                        <img src="images/15.avif" 
+                             alt="Powerful waterfall cascading through rocky terrain- Mystical Mountain Waterfalls photography" 
+                             class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500 ease-in-out"
+                             loading="lazy">
+                        <div class="overlay">
+                            <div class="overlay-content">
+                                <div class="flex items-center space-x-2">
+                                    <span class="bg-blue-600 text-white px-2 py-1 rounded-full text-xs font-medium">Water</span>
+                                </div>
+                                <div class="flex items-center space-x-2">
+                                    <button class="like-btn text-white hover:text-red-500" data-likes="267">
+                                        <i class="fas fa-heart"></i> 267
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="overlay-bottom">
+                                <div>
+                                    <h3 class="text-white text-xl font-bold">Mystical Mountain Waterfalls</h3>
+                                    <p class="text-gray-300 text-sm">Powerful waterfall cascading through rocky terrain</p>
+                                </div>
+                                <div class="flex space-x-2">
+                                    <button class="share-btn text-white hover:text-blue-400">
+                                        <i class="fas fa-share"></i>
+                                    </button>
+                                    <button class="download-btn text-white hover:text-green-400">
+                                        <i class="fas fa-download"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-20 px-6 bg-gradient-to-br from-gray-900 to-gray-800">
+            <div class="container mx-auto">
+                <div class="max-w-6xl mx-auto">
+                    <div class="text-center mb-16">
+                        <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">About DevXVisions Gallery</h2>
+                        <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                            We're passionate photographers dedicated to capturing the world's most beautiful moments 
+                            and sharing them with fellow art enthusiasts.
+                        </p>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
+                        <div>
+                            <h3 class="text-3xl font-bold text-white mb-6">Our Mission</h3>
+                            <p class="text-gray-300 mb-6 leading-relaxed">
+                                At DevXVisions Gallery, we believe that photography has the power to inspire, connect, and transform. 
+                                Our mission is to curate and showcase exceptional photography that tells stories, captures emotions, 
+                                and celebrates the beauty of our world.
+                            </p>
+                            <p class="text-gray-300 mb-8 leading-relaxed">
+                                From breathtaking landscapes to intimate wildlife moments, we carefully select each image 
+                                to ensure it meets our high standards for artistic excellence and emotional impact.
+                            </p>
+                            
+                            <div class="grid grid-cols-2 gap-6">
+                                <div class="text-center">
+                                    <div class="w-16 h-16 bg-orange-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                                        <i class="fas fa-camera text-white text-2xl"></i>
+                                    </div>
+                                    <h4 class="text-white font-semibold mb-2">Professional Quality</h4>
+                                    <p class="text-gray-400 text-sm">High-resolution images from expert photographers</p>
+                                </div>
+                                <div class="text-center">
+                                    <div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                                        <i class="fas fa-heart text-white text-2xl"></i>
+                                    </div>
+                                    <h4 class="text-white font-semibold mb-2">Curated Collection</h4>
+                                    <p class="text-gray-400 text-sm">Hand-picked images that tell compelling stories</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="relative">
+                            <div class="bg-gradient-to-br from-orange-500 to-pink-500 rounded-2xl p-8 text-white">
+                                <div class="text-center">
+                                    <div class="w-24 h-24 bg-white bg-opacity-20 rounded-full flex items-center justify-center mx-auto mb-6">
+                                        <i class="fas fa-globe text-4xl"></i>
+                                    </div>
+                                    <h3 class="text-2xl font-bold mb-4">Global Community</h3>
+                                    <p class="text-lg mb-6">
+                                        Join thousands of photography enthusiasts from around the world who share our passion for visual storytelling.
+                                    </p>
+                                    <div class="grid grid-cols-3 gap-4 text-center">
+                                        <div>
+                                            <div class="text-2xl font-bold">50+</div>
+                                            <div class="text-sm opacity-80">Countries</div>
+                                        </div>
+                                        <div>
+                                            <div class="text-2xl font-bold">1000+</div>
+                                            <div class="text-sm opacity-80">Contributors</div>
+                                        </div>
+                                        <div>
+                                            <div class="text-2xl font-bold">1M+</div>
+                                            <div class="text-sm opacity-80">Views</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Team Section -->
+                    <div class="text-center mb-16">
+                        <h3 class="text-3xl font-bold text-white mb-6">Meet Our Developer</h3>
+                        <div class="max-w-2xl mx-auto">
+                            <div class="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-8 border border-white border-opacity-20">
+                                <div class="flex flex-col md:flex-row items-center gap-8">
+                                    <div class="flex-shrink-0">
+                                        <div class="w-32 h-32 bg-gradient-to-br from-orange-400 to-orange-600 rounded-full flex items-center justify-center shadow-2xl">
+                                            <i class="fas fa-code text-white text-4xl"></i>
+                                        </div>
+                                    </div>
+                                    <div class="text-center md:text-left">
+                                        <h4 class="text-white font-bold text-2xl mb-2">Ilesh Patel</h4>
+                                        <p class="text-orange-400 text-lg font-semibold mb-4">Full-Stack Developer & Data Analyst</p>
+                                        <p class="text-gray-300 text-base leading-relaxed mb-6">
+                                            Passionate developer with expertise in modern web technologies, creating beautiful and functional 
+                                            digital experiences. Specializes in responsive design, performance optimization, and user-centered development.
+                                        </p>
+                                        <div class="flex flex-wrap justify-center md:justify-start gap-4">
+                                            <div class="flex items-center space-x-2">
+                                                <i class="fas fa-code text-orange-400"></i>
+                                                <span class="text-gray-300 text-sm">Frontend & Backend</span>
+                                            </div>
+                                            <div class="flex items-center space-x-2">
+                                                <i class="fas fa-mobile-alt text-orange-400"></i>
+                                                <span class="text-gray-300 text-sm">Responsive Design</span>
+                                            </div>
+                                            <div class="flex items-center space-x-2">
+                                                <i class="fas fa-rocket text-orange-400"></i>
+                                                <span class="text-gray-300 text-sm">Performance</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Skills Section -->
+                                <div class="mt-8 pt-8 border-t border-white border-opacity-20">
+                                    <h5 class="text-white font-semibold mb-4">Technical Skills</h5>
+                                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                                        <div class="text-center">
+                                            <div class="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mx-auto mb-2">
+                                                <i class="fab fa-js-square text-white"></i>
+                                            </div>
+                                            <span class="text-gray-300 text-sm">JavaScript</span>
+                                        </div>
+                                        <div class="text-center">
+                                            <div class="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center mx-auto mb-2">
+                                                <i class="fab fa-html5 text-white"></i>
+                                            </div>
+                                            <span class="text-gray-300 text-sm">HTML5</span>
+                                        </div>
+                                        <div class="text-center">
+                                            <div class="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center mx-auto mb-2">
+                                                <i class="fab fa-python text-white"></i>
+                                            </div>
+                                            <span class="text-gray-300 text-sm">Python</span>
+                                        </div>
+                                        <div class="text-center">
+                                            <div class="w-12 h-12 bg-pink-600 rounded-lg flex items-center justify-center mx-auto mb-2">
+                                                <i class="fab fa-css3-alt text-white"></i>
+                                            </div>
+                                            <span class="text-gray-300 text-sm">CSS3</span>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 px-6 bg-gradient-to-br from-gray-900 to-black">
+            <div class="container mx-auto">
+                <div class="max-w-6xl mx-auto">
+                    <div class="text-center mb-16">
+                        <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">Get In Touch</h2>
+                        <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                            Have questions, feedback, or want to collaborate? We'd love to hear from you. 
+                            Reach out and let's create something amazing together.
+                        </p>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                        <!-- Contact Form -->
+                        <div class="bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-8 border border-white border-opacity-20">
+                            <h3 class="text-2xl font-bold text-white mb-6">Send us a Message</h3>
+                            <form id="contactForm" class="space-y-6">
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                    <div>
+                                        <label for="contactName" class="block text-white font-semibold mb-2">Name *</label>
+                                        <input type="text" id="contactName" name="name" required 
+                                               class="w-full px-4 py-3 bg-white bg-opacity-10 border border-white border-opacity-20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-orange-500 transition duration-300"
+                                               placeholder="Your full name">
+                                    </div>
+                                    <div>
+                                        <label for="contactEmail" class="block text-white font-semibold mb-2">Email *</label>
+                                        <input type="email" id="contactEmail" name="email" required 
+                                               class="w-full px-4 py-3 bg-white bg-opacity-10 border border-white border-opacity-20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-orange-500 transition duration-300"
+                                               placeholder="your@email.com">
+                                    </div>
+                                </div>
+                                
+                                <div>
+                                    <label for="contactSubject" class="block text-white font-semibold mb-2">Subject *</label>
+                                    <select id="contactSubject" name="subject" required 
+                                            class="w-full px-4 py-3 bg-white bg-opacity-10 border border-white border-opacity-20 rounded-lg text-white focus:outline-none focus:border-orange-500 transition duration-300">
+                                        <option value="">Select a subject</option>
+                                        <option value="general">General Inquiry</option>
+                                        <option value="collaboration">Collaboration</option>
+                                        <option value="feedback">Feedback</option>
+                                        <option value="technical">Technical Support</option>
+                                        <option value="partnership">Partnership</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                </div>
+                                
+                                <div>
+                                    <label for="contactMessage" class="block text-white font-semibold mb-2">Message *</label>
+                                    <textarea id="contactMessage" name="message" rows="6" required 
+                                              class="w-full px-4 py-3 bg-white bg-opacity-10 border border-white border-opacity-20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-orange-500 transition duration-300"
+                                              placeholder="Tell us what's on your mind..."></textarea>
+                                </div>
+                                
+                                <button type="submit" 
+                                        class="w-full bg-gradient-to-r from-orange-600 to-orange-700 hover:from-orange-700 hover:to-orange-800 text-white font-semibold py-4 px-8 rounded-xl transition duration-300 transform hover:scale-105 shadow-lg">
+                                    <i class="fas fa-paper-plane mr-2"></i>Send Message
+                                </button>
+                            </form>
+                        </div>
+                        
+                        <!-- Contact Info -->
+                        <div class="space-y-8">
+                            <div>
+                                <h3 class="text-2xl font-bold text-white mb-6">Contact Information</h3>
+                                <div class="space-y-6">
+                                    <div class="flex items-start space-x-4">
+                                        <div class="w-12 h-12 bg-orange-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                                            <i class="fas fa-envelope text-white"></i>
+                                        </div>
+                                        <div>
+                                            <h4 class="text-white font-semibold mb-1">Email</h4>
+                                            <p class="text-gray-300">ileshpatel666@gmail.com</p>
+                                            <p class="text-gray-400 text-sm">We'll respond within 24 hours</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="flex items-start space-x-4">
+                                        <div class="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                                            <i class="fas fa-phone text-white"></i>
+                                        </div>
+                                        <div>
+                                            <h4 class="text-white font-semibold mb-1">Phone</h4>
+                                            <p class="text-gray-300">+19 77790 56708</p>
+                                            <p class="text-gray-400 text-sm">Mon-Fri, 9AM-6PM IST</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="flex items-start space-x-4">
+                                        <div class="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                                            <i class="fas fa-map-marker-alt text-white"></i>
+                                        </div>
+                                        <div>
+                                            <h4 class="text-white font-semibold mb-1">Location</h4>
+                                            <p class="text-gray-300">Surat, Gujarat</p>
+                                            <p class="text-gray-400 text-sm">India</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Social Media -->
+                            <div>
+                                <h4 class="text-white font-semibold mb-4">Follow Us</h4>
+                                <div class="flex space-x-4">
+                                    <a href="https://www.instagram.com/ilesh.009" class="w-12 h-12 bg-gradient-to-br from-pink-500 to-purple-600 rounded-lg flex items-center justify-center hover:scale-110 transition duration-300">
+                                        <i class="fab fa-instagram text-white"></i>
+                                    </a>
+                                    <a href="https://x.com/Ilesh_009" class="w-12 h-12 bg-gradient-to-br from-blue-400 to-blue-600 rounded-lg flex items-center justify-center hover:scale-110 transition duration-300">
+                                        <i class="fab fa-twitter text-white"></i>
+                                    </a>
+                                    <a href="https://www.facebook.com/share/1Akw57qagC/" class="w-12 h-12 bg-gradient-to-br from-blue-600 to-blue-800 rounded-lg flex items-center justify-center hover:scale-110 transition duration-300">
+                                        <i class="fab fa-facebook text-white"></i>
+                                    </a>
+                                    <a href="https://www.youtube.com/@ileshpatel666" class="w-12 h-12 bg-gradient-to-br from-red-500 to-red-600 rounded-lg flex items-center justify-center hover:scale-110 transition duration-300">
+                                        <i class="fab fa-youtube text-white"></i>
+                                    </a>
+                                    <a href="https://github.com/IleshDevX" class="w-12 h-12 bg-gradient-to-br from-gray-700 to-gray-900 rounded-lg flex items-center justify-center hover:scale-110 transition duration-300">
+                                        <i class="fab fa-github text-white"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            <!-- FAQ -->
+                            <div>
+                                <h4 class="text-white font-semibold mb-4">Quick Answers</h4>
+                                <div class="space-y-3">
+                                    <div class="bg-white bg-opacity-5 rounded-lg p-4">
+                                        <h5 class="text-white font-medium mb-2">Are downloads free?</h5>
+                                        <p class="text-gray-400 text-sm">Yes! All photos are free for personal use.</p>
+                                    </div>
+                                    <div class="bg-white bg-opacity-5 rounded-lg p-4">
+                                        <h5 class="text-white font-medium mb-2">Can I use photos commercially?</h5>
+                                        <p class="text-gray-400 text-sm">Please contact us for commercial licensing.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-black bg-opacity-30 border-t border-gray-800 py-12 px-6">
+        <div class="container mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="col-span-1 md:col-span-2">
+                    <div class="flex items-center space-x-2 mb-4">
+                        <svg class="w-8 h-8 text-orange-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path></svg>
+                        <h3 class="text-2xl font-bold text-white">DevXVisions</h3>
+                    </div>
+                    <p class="text-gray-400 mb-4">Capturing moments, creating art. A modern gallery experience inspired by clean design and innovative technology.</p>
+                    <div class="flex space-x-4">
+                        <a href="https://www.instagram.com/ilesh.009" class="text-gray-400 hover:text-orange-500 transition duration-300">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                        <a href="https://x.com/Ilesh_009" class="text-gray-400 hover:text-orange-500 transition duration-300">
+                            <i class="fab fa-twitter text-xl"></i>
+                        </a>
+                        <a href="https://www.facebook.com/share/1Akw57qagC/" class="text-gray-400 hover:text-orange-500 transition duration-300">
+                            <i class="fab fa-facebook text-xl"></i>
+                        </a>
+                        <a href="https://www.youtube.com/@ileshpatel666" class="text-gray-400 hover:text-orange-500 transition duration-300">
+                            <i class="fab fa-youtube text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-400 hover:text-orange-500 transition duration-300">Home</a></li>
+                        <li><a href="#gallery" class="text-gray-400 hover:text-orange-500 transition duration-300">Gallery</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-orange-500 transition duration-300">About</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-orange-500 transition duration-300">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Categories</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-orange-500 transition duration-300">Landscape</a></li>
+                        <li><a href="#" class="hover:text-orange-500 transition duration-300">Nature</a></li>
+                        <li><a href="#" class="hover:text-orange-500 transition duration-300">Wildlife</a></li>
+                        <li><a href="#" class="hover:text-orange-500 transition duration-300">Water</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 DevXVisions Gallery. All Rights Reserved.</p>
+                <p class="text-sm mt-2">Built with modern web technologies for the best user experience.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Enhanced Modal -->
+    <div id="imageModal" class="modal fixed inset-0 bg-black bg-opacity-90 z-50 p-4">
+        <div class="modal-content relative max-w-6xl max-h-full mx-auto">
+            <!-- Image Counter -->
+            <div class="image-counter">
+                <span id="currentImageIndex">1</span> / <span id="totalImages">9</span>
+            </div>
+            
+            <!-- Close Button -->
+            <button id="closeModal" class="absolute -top-4 -right-4 md:-top-6 md:-right-6 text-white bg-orange-600 rounded-full h-10 w-10 flex items-center justify-center hover:bg-orange-700 transition duration-300 z-10">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+            </button>
+            
+            <!-- Navigation Arrows -->
+            <button id="prevImage" class="absolute left-4 top-1/2 transform -translate-y-1/2 text-white bg-black bg-opacity-50 rounded-full h-12 w-12 flex items-center justify-center hover:bg-orange-600 transition duration-300 z-10">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button id="nextImage" class="absolute right-4 top-1/2 transform -translate-y-1/2 text-white bg-black bg-opacity-50 rounded-full h-12 w-12 flex items-center justify-center hover:bg-orange-600 transition duration-300 z-10">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+            
+            <!-- Main Image -->
+            <img id="modalImage" src="" alt="Enlarged gallery image" class="rounded-lg object-contain max-w-full max-h-[80vh] mx-auto">
+            
+            <!-- Image Info -->
+            <div class="mt-4 text-center text-white">
+                <h3 id="modalTitle" class="text-2xl font-bold mb-2"></h3>
+                <p id="modalDescription" class="text-gray-300 mb-4"></p>
+                <div class="flex justify-center space-x-6">
+                    <button id="modalLikeBtn" class="like-btn text-white hover:text-red-500">
+                        <i class="fas fa-heart mr-2"></i><span id="modalLikes">0</span>
+                    </button>
+                    <button id="modalShareBtn" class="share-btn text-white hover:text-blue-400">
+                        <i class="fas fa-share mr-2"></i>Share
+                    </button>
+                    <button id="modalDownloadBtn" class="download-btn text-white hover:text-green-400">
+                        <i class="fas fa-download mr-2"></i>Download
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Floating Action Buttons -->
+    <div class="floating-action">
+        <button id="slideshowBtn" class="bg-orange-600 hover:bg-orange-700 text-white rounded-full p-4 shadow-lg transition duration-300">
+            <i class="fas fa-play text-xl"></i>
+        </button>
+    </div>
+
+    <!-- Slideshow Controls -->
+    <div id="slideshowControls" class="slideshow-controls">
+        <button id="pauseSlideshow" class="bg-orange-600 hover:bg-orange-700 text-white px-6 py-3 rounded-lg mr-4">
+            <i class="fas fa-pause mr-2"></i>Pause
+        </button>
+        <button id="stopSlideshow" class="bg-gray-600 hover:bg-gray-700 text-white px-6 py-3 rounded-lg">
+            <i class="fas fa-stop mr-2"></i>Stop
+        </button>
+    </div>
+
+    <!-- Loading Indicator -->
+    <div id="loadingIndicator" class="loading">
+        <div class="spinner"></div>
+        <p class="text-gray-400 mt-4">Loading images...</p>
+    </div>
+
+    <script src="main.js"></script>
+
+</body>
+</html>
