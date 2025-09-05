@@ -6,7 +6,7 @@ DevXVisions Gallery is a modern, responsive photo gallery website that showcases
 
 ## 📷 Screenshot
 
-![DevXVisions Gallery Screenshot](./assets/screenshot.png)
+![DevXVisions Gallery Screenshot](./images/screenshot.png)
 *Main gallery interface showcasing the responsive grid layout and modern design*
 
 ## ✨ Key Features
