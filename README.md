@@ -1,7 +1,5 @@
 # 📸 DevXVisions Gallery
 
-[![Live Demo](https://img.shields.io/badge/Live-Demo-orange?style=for-the-badge&logo=vercel)](https://your-gallery-website.vercel.app)
-
 ## 🌟 Project Description
 
 DevXVisions Gallery is a modern, responsive photo gallery website that showcases stunning photography from around the world. Built entirely with vanilla web technologies, this front-end project demonstrates clean code practices and modern web design principles. The gallery features an intuitive interface for browsing, filtering, and viewing high-quality images across various categories including landscapes, nature, wildlife, and water scenes.
@@ -47,7 +45,7 @@ Follow these simple steps to run the project locally:
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/devxvisions-gallery.git
+   git clone https://github.com/IleshDevX/devxvisions-gallery.git
    ```
 
 2. **Navigate to the project directory**
@@ -78,7 +76,6 @@ devxvisions-gallery/
 ├── style.css           # Custom CSS styles
 ├── main.js            # JavaScript functionality
 ├── images/            # Gallery images directory
-├── assets/            # Project assets (screenshots, etc.)
 └── README.md          # Project documentation
 ```
 
@@ -122,4 +119,5 @@ devxvisions-gallery/
 <div align="center">
   <p>⭐ Star this repository if you found it helpful!</p>
   <p>Made with ❤️ and vanilla JavaScript</p>
+  <p>Made by IleshdevX </p>
 </div>
