@@ -244,7 +244,6 @@ body {
     right: 0;
     background: rgba(0, 0, 0, 0.95);
     backdrop-filter: blur(10px);
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .mobile-menu.active {
@@ -266,6 +265,35 @@ body {
     background: linear-gradient(45deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
     border-radius: 1rem;
     pointer-events: none;
+}
+
+/* Custom Select Dropdown Styling for Contact Section */
+#contactSubject {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: rgba(255,255,255,0.08) url('data:image/svg+xml;utf8,<svg fill="white" height="20" viewBox="0 0 20 20" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M7.293 7.293a1 1 0 011.414 0L10 8.586l1.293-1.293a1 1 0 111.414 1.414l-2 2a1 1 0 01-1.414 0l-2-2a1 1 0 010-1.414z"/></svg>') no-repeat right 1rem center/1.5em;
+    color: #fff;
+    border: 1.5px solid rgba(255,255,255,0.2);
+    border-radius: 0.75rem;
+    padding-right: 2.5rem;
+    font-size: 1rem;
+    transition: border 0.3s, box-shadow 0.3s;
+    box-shadow: none;
+}
+#contactSubject:focus {
+    border-color: var(--primary-color);
+    outline: none;
+    box-shadow: 0 0 0 2px var(--primary-color)33;
+}
+#contactSubject option {
+    color: #222;
+    background: #fff;
+}
+
+/* Remove default arrow for select in IE */
+select::-ms-expand {
+    display: none;
 }
 
 @media (max-width: 768px) {
