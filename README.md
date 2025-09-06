@@ -18,7 +18,6 @@ DevXVisions Gallery is a modern, responsive photo gallery website that showcases
 - 🏷️ **Category Filtering** - Filter images by landscape, nature, wildlife, and water
 - 🎬 **Slideshow Mode** - Automatic slideshow with play/pause controls
 - ❤️ **Interactive Elements** - Like, share, and download functionality
-- 🌙 **Dark Theme** - Modern dark interface with gradient accents
 - ⚡ **Lazy Loading** - Performance optimized with lazy loading images
 - 🔄 **Infinite Scroll** - Dynamic content loading for seamless browsing
 - ⌨️ **Keyboard Navigation** - Full keyboard support for accessibility
