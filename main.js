@@ -827,5 +827,5 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initialize micro-interactions
     initializeMicroInteractions();
 
-    console.log('DevXVisions Gallery initialized successfully!');
+    console.log('Insight_Visions Gallery initialized successfully!');
 });

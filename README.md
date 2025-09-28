@@ -1,12 +1,12 @@
-# 📸 DevXVisions Gallery
+# 📸 Insight_Visions Gallery
 
 ## 🌟 Project Description
 
-DevXVisions Gallery is a modern, responsive photo gallery website that showcases stunning photography from around the world. Built entirely with vanilla web technologies, this front-end project demonstrates clean code practices and modern web design principles. The gallery features an intuitive interface for browsing, filtering, and viewing high-quality images across various categories including landscapes, nature, wildlife, and water scenes.
+Insight_Visions Gallery is a modern, responsive photo gallery website that showcases stunning photography from around the world. Built entirely with vanilla web technologies, this front-end project demonstrates clean code practices and modern web design principles. The gallery features an intuitive interface for browsing, filtering, and viewing high-quality images across various categories including landscapes, nature, wildlife, and water scenes.
 
 ## 📷 Screenshot
 
-![DevXVisions Gallery Screenshot](./images/screenshot.png)
+![Insight_Visions Gallery Screenshot](./images/screenshot.png)
 *Main gallery interface showcasing the responsive grid layout and modern design*
 
 ## ✨ Key Features
@@ -44,12 +44,12 @@ Follow these simple steps to run the project locally:
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/IleshDevX/devxvisions-gallery.git
+   git clone https://github.com/IleshDevX/insight-visions-gallery.git
    ```
 
 2. **Navigate to the project directory**
    ```bash
-   cd devxvisions-gallery
+   cd insight-visions-gallery
    ```
 
 3. **Open the project**
@@ -70,7 +70,7 @@ That's it! The gallery should now be running in your browser.
 ## 📁 Project Structure
 
 ```
-devxvisions-gallery/
+insight-visions-gallery/
 ├── index.html          # Main HTML file
 ├── style.css           # Custom CSS styles
 ├── main.js            # JavaScript functionality
@@ -118,5 +118,5 @@ devxvisions-gallery/
 <div align="center">
   <p>⭐ Star this repository if you found it helpful!</p>
   <p>Made with ❤️ and vanilla JavaScript</p>
-  <p>Made by IleshdevX </p>
+  <p>Made by IleshDevX </p>
 </div>
