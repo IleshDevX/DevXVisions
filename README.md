@@ -6,7 +6,7 @@ DevXVisions Gallery is a modern, responsive photo gallery website that showcases
 
 ## 📷 Screenshot
 
-![DevXVisions Gallery Screenshot](./images/screenshot.png)
+![Insight_Visions Gallery Screenshot](./images/screenshot.png)
 *Main gallery interface showcasing the responsive grid layout and modern design*
 
 ## ✨ Key Features
@@ -118,5 +118,5 @@ devxvisions-gallery/
 <div align="center">
   <p>⭐ Star this repository if you found it helpful!</p>
   <p>Made with ❤️ and vanilla JavaScript</p>
-  <p>Made by IleshdevX </p>
+  <p>Made by IleshDevX </p>
 </div>
