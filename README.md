@@ -2,7 +2,7 @@
 
 ## 🌟 Project Description
 
-DevXVisions Gallery is a modern, responsive photo gallery website that showcases stunning photography from around the world. Built entirely with vanilla web technologies, this front-end project demonstrates clean code practices and modern web design principles. The gallery features an intuitive interface for browsing, filtering, and viewing high-quality images across various categories including landscapes, nature, wildlife, and water scenes.
+Insight_Visions Gallery is a modern, responsive photo gallery website that showcases stunning photography from around the world. Built entirely with vanilla web technologies, this front-end project demonstrates clean code practices and modern web design principles. The gallery features an intuitive interface for browsing, filtering, and viewing high-quality images across various categories including landscapes, nature, wildlife, and water scenes.
 
 ## 📷 Screenshot
 
