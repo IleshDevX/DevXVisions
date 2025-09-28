@@ -1,4 +1,4 @@
-# 📸 DevXVisions Gallery
+# 📸 Insight_Visions Gallery
 
 ## 🌟 Project Description
 
